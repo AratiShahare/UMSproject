@@ -3,6 +3,8 @@
 
   
   <div class="container">
+    <div class="row">
+      <div class="col">
     <form class="form-1" [formGroup]="login">
       <h1>Login</h1>
       <label for="email">Email</label>
@@ -21,15 +23,24 @@
        *ngIf="login.get('pwd')?.invalid && login.get('pwd')?.touched">
         enter valid password</small>
 
-   <ul><li>  
-    <a href="register" id="rg">signup</a>
-    <a href="forgetpassword" id="fp">Forget Password</a>
-   </li></ul>
+  <div class="link row">
+    <div class="col">
+      <a href="forgetpassword" id="fp">Forget Password</a>
+
+    </div>
+    <div class="col">
+      <a href="register" id="rg">signup</a>
+
+    </div>
+
+  </div>
+  
 
       <button (click)="logiPost()" [disabled]="login.invalid">Login</button>
       
 </form>
-
+</div>
+</div>
 </div>
 
 

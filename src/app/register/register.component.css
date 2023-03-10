@@ -1,4 +1,4 @@
-#b1{
+/* #b1{
 margin-left: 400px;
 margin-bottom: 30px;
 }
@@ -6,6 +6,9 @@ margin-bottom: 30px;
 #b2{
     margin-left: 60px;
     margin-bottom: 30px;
+    } */
+    button{
+      width:200px
     }
      
     .container {

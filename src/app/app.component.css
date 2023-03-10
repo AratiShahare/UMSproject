@@ -3,7 +3,8 @@ a{
 }
 
 #home{
-    margin-left: 800px;
+    
+    justify-content: end;
 }
 
 

@@ -1,6 +1,8 @@
 
 <div class="container">
     <form class="form-1" [formGroup]="unlock">
+      <div class="row">
+        <div class="col">
       <h1>Unlock Account</h1>
       <label for="email">Email</label>
       <input type="email" name="email" id="email" required formControlName="email">
@@ -30,7 +32,8 @@
      <small style="margin-left: 30px; color: red;" *ngIf="passw">Password does not match</small>
 
       <button (click)="Unlockpost()">Submit</button>
-    
+      </div>
+    </div>    
 </form>
 
 
