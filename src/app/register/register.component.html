@@ -1,0 +1,104 @@
+
+
+
+
+  <div class="container bg-warning my-2">
+    <form class="form-1" [formGroup]="register">
+    <h1 class="text-center py-2">Registration form</h1>
+    <div class="row">
+        <div class="col-md-6">
+             <div class="form-group">
+                  <label class="form-label">first name</label>
+                  <input type="text" class="form-control" placeholder="enter your name*" 
+                  formControlName="fname" name="fname">
+                   <!-- validation -->
+                   <small  class="text-danger" *ngIf="register.get('fname')?.invalid && register.get('fname')?.touched">
+                    enter valid name </small>
+               
+             </div>
+             <div class="form-group">
+                  <label class="form-label">email</label>
+                  <input type="email" class="form-control" placeholder="enter your email*"
+                  formControlName="email" name="email" #mail (blur)="checkget(mail.value)">
+
+                  <!-- validation -->
+                  <small class="text-danger" *ngIf="register.get('email')?.invalid && register.get('email')?.touched">enter
+                    valid email
+                  </small>
+            </div>
+            <div class="form-group">
+                <label class="form-label">mobile no</label>
+                <input type="text" class="form-control" 
+                formControlName="phno" name="phno" placeholder="enter your mobile no.*">
+                  <!-- validation -->
+                  <small class="text-danger" *ngIf="register.get('phno')?.invalid && register.get('phno')?.touched" >enter
+                    valid phone no.
+                  </small>
+                
+            </div>
+            <div class="form-group">
+              <label class="form-label">Dob</label>
+              <input type="date" class="form-control" 
+              formControlName="dob" name="dob" >
+                 <!-- validation -->
+                 <small class="text-danger" *ngIf="register.get('dob')?.invalid && register.get('dob')?.touched">enter
+                  valid DOB.
+                </small>
+          </div>
+            <div class="form-group">
+               <label for="" class="form-label">Gender</label>
+               <div class="form-check">
+                <label for="m" class="form-check-label">Male</label>
+                <input type="radio" id="m" class="form-check-input" name="gender">
+                        
+               </div>
+               <div class="form-check">
+                <label for="f" class="form-check-label">Female</label>
+                <input type="radio" id="f" class="form-check-input" name="gender" formControlName="gender"  >
+               </div>
+            </div>
+        </div>
+     <div class="col-md-6">
+        <div class="form-group">
+          <label class="form-label">last name</label>
+          <input type="text" class="form-control" placeholder="enter your last name*"
+           name="lname" formControlName="lname">
+              <!-- validation -->
+              <small class="text" *ngIf="register.get('lname')?.invalid && register.get('lname')?.touched">enter valid surname</small>
+        </div> 
+        
+          <div class="form-group">
+            <label for="" class="form-label">Country</label>
+            <select name="countryId" id="" class="form-control" placeholder="select" formControlName="countryId"
+            (change)="stateget($any($event.target).value)">
+              <option value="" *ngFor="let a of country | keyvalue" [value]="a.key" >{{a.value}}</option>
+            </select>
+               <!-- validation -->
+              
+          </div> 
+  
+          <div class="form-group">
+            <label for="" class="form-label">State</label>
+            <select name="stateId" id="" class="form-control" placeholder="select" formControlName="stateId"
+            (change)="cityget($any($event.target).value)">
+              <option  *ngFor="let a of state |keyvalue" [value]="a.key">{{a.value}}</option>
+            </select>
+          </div> 
+          
+          <div class="form-group">
+            <label for="" class="form-label">City</label>
+            <select name="cityId" id="" class="form-control" placeholder="select" formControlName="cityId">
+              <option value="" *ngFor="let a of city | keyvalue" [value]="a.key">{{a.value}}</option>
+            </select>
+          </div> 
+           
+    
+        </div>
+    
+      </div>
+      <button  class="btn btn-success " id="b1" type="button">Reset</button>
+        <button class="btn btn-primary" id="b2" type="button" (click)="regpost()">Register</button>
+    </form>
+  </div>                               
+  
+

@@ -1,0 +1,26 @@
+#b1{
+margin-left: 400px;
+margin-bottom: 30px;
+}
+ 
+#b2{
+    margin-left: 60px;
+    margin-bottom: 30px;
+    }
+     
+    .container {
+        height: 100vh;
+        margin: 0 auto;
+        position: relative;
+        background: linear-gradient(to right, #25aae1, #4481eb, #04befe, #3f86ed);
+      }
+
+      input.ng-touched.ng-invalid{
+        border:1px solid red;
+        box-shadow: 0px 0px 15px 5px rgba(255, 0, 0, 0.194)inset;
+      }     
+
+  select.ng-touched.ng-invalid{
+        border:1px solid red;
+        box-shadow: 0px 0px 15px 5px rgba(255, 0, 0, 0.194)inset;
+      }     

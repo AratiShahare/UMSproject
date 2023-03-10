@@ -1,0 +1,42 @@
+a{
+    text-decoration: none;
+}
+
+#home{
+    margin-left: 800px;
+}
+
+
+#a1:hover{
+    background-color: blue;
+    color: white;
+    cursor: pointer;
+    border-radius:15px;
+    border: none;
+    font-weight: bolder;
+    color: #fff;
+    background: linear-gradient(to right, #25aae1, #4481eb, #04befe, #3f86ed);
+}
+
+#a2:hover{
+    background-color: blue;
+    color: white;
+    cursor: pointer;
+    border-radius:15px;
+    border: none;
+    font-weight: bolder;
+    color: #fff;
+    background: linear-gradient(to right, #25aae1, #4481eb, #04befe, #3f86ed);
+}
+
+#a3:hover{
+    background-color: blue;
+    color: white;
+    cursor: pointer;
+    border-radius:15px;
+    border: none;
+    font-weight: bolder;
+    color: #fff;
+    background: linear-gradient(to right, #25aae1, #4481eb, #04befe, #3f86ed);
+}
+

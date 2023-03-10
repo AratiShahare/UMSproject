@@ -1,0 +1,35 @@
+
+
+
+  
+  <div class="container">
+    <form class="form-1" [formGroup]="login">
+      <h1>Login</h1>
+      <label for="email">Email</label>
+      <input type="email" name="email" id="email" required formControlName="email">
+
+         <!-- validation -->
+         <small style="margin-left: 30px;" class="text-danger" 
+         *ngIf="login.get('email')?.invalid && login.get('email')?.touched">
+          enter valid email </small>
+     
+     
+         <label for="password">Password</label>
+      <input type="password" name="pwd" id="password" required formControlName="pwd">
+       <!-- validation -->
+       <small style="margin-left: 30px;" class="text-danger" 
+       *ngIf="login.get('pwd')?.invalid && login.get('pwd')?.touched">
+        enter valid password</small>
+
+   <ul><li>  
+    <a href="register" id="rg">signup</a>
+    <a href="forgetpassword" id="fp">Forget Password</a>
+   </li></ul>
+
+      <button (click)="logiPost()" [disabled]="login.invalid">Login</button>
+      
+</form>
+
+</div>
+
+

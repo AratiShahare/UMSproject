@@ -1,0 +1,36 @@
+
+<div class="container">
+    <form class="form-1" [formGroup]="unlock">
+      <h1>Unlock Account</h1>
+      <label for="email">Email</label>
+      <input type="email" name="email" id="email" required formControlName="email">
+      <!-- validation -->
+      <small id="small1" *ngIf="unlock.get('email')?.invalid && unlock.get('email')?.touched">enter valid email</small>
+   
+      <label for="password">Temporary Password</label>
+      <input  type="password" name="tempPwd" id="password" required  formControlName="tempPwd">
+     <!-- validation -->
+     <small *ngIf="unlock.get('tempPwd')?.invalid && unlock.get('tempPwd')?.touched">
+   
+     </small>
+
+      <label for="password">New Password</label>
+      <input type="password" name="newPwd" id="password" required formControlName="newPwd" >
+      <!-- validation -->
+     <small *ngIf="unlock.get('newPwd')?.invalid && unlock.get('newPwd')?.touched">
+      
+     </small>
+
+      <label for="password">Confirm Password</label>
+      <input type="password" name="confirmPwd" id="password" (blur)="pass()" required formControlName="confirmPwd">
+       <!-- validation -->
+     <small *ngIf="unlock.get('confirmPwd')?.invalid && unlock.get('confirmPwd')?.touched">
+
+     </small>
+     <small style="margin-left: 30px; color: red;" *ngIf="passw">Password does not match</small>
+
+      <button (click)="Unlockpost()">Submit</button>
+    
+</form>
+
+
